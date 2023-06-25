@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+/*レイアウト用CSS*/
+body {
+    background: #fff;
+    margin: 0;
+}
+
+.Block2 {
+    /*レイアウト用のCSS*/
+    padding: 0 0 40px 0;
+    background-color: #dff;
+}
+
+.Block1 {
+    position: relative;
+    padding: 20px 0 40px 0;
+
+}
+
+.Block2 {
+    position: relative;
+    z-index: 0;
+}
+
+.Block2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /*四角形を傾けます*/
+    transform: skewY(7deg);
+    transform-origin: top right;
+
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: #dff;
+}
+
+
+
+/*ヘッダー部分*/
+header {
+    padding: 3% 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-weight: lighter;
+    color: #777;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 10px;
+}
+
+header nav {
+    margin: 0 0 0 auto;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+header li {
+    margin: 0 0 0 25px;
+}
+
+
+/*リンク全般*/
+a {
+    text-decoration: none;
+    letter-spacing: 3px;
+    color: #777;
+}
+
+a:hover {
+    opacity: 0.5;
+    border-bottom: 1px solid #0ff;
+    margin-bottom: -1px;
+    /*ボーダー分のずれ修正*/
+}
+
+a:visited {
+    color: #777;
+}
+
+.now {
+    color: #0cc;
+}
+
+
+/*写真*/
+.photo {
+    padding: 15% 0 10%;
+    text-align: center;
+}
+
+/*副題*/
+h2 {
+    text-align: center;
+    font-weight: lighter;
+    letter-spacing: 7px;
+    color: #0cc;
+}
+
+
+/*各文章*/
+.item {
+    line-height: 3;
+    text-align: center;
+    font-family: Helvetica;
+    color: #777;
+    margin-bottom: 10%;
+}
+
+/*フッター*/
+footer {
+    padding: 0 10%;
+    color: #777;
+}
+
+h3 {
+    border-bottom: 1px #c4c4c4 solid;
+    letter-spacing: 5px;
+    font-weight: lighter;
+    width: 50%;
+}
+
+small {
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+}
