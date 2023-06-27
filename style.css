@@ -4,44 +4,36 @@
     box-sizing: border-box;
 }
 
-/*レイアウト用CSS*/
+/*全体の設定*/
 body {
-    background: #fff;
     margin: 0;
+    font-family: Helvetica;
+    animation: anime1 1s ease;
+    /* アニメーション指定 */
 }
 
+@keyframes anime1 {
+    0% {
+        opacity: 0;
+        /* 透明度指定 */
+        padding-top: 5%;
+        /* 位置指定 */
+    }
+
+    100% {
+        opacity: 1;
+        /* 透明度指定 */
+    }
+}
+
+/* 斜め配置 clip-path */
 .Block2 {
-    /*レイアウト用のCSS*/
-    padding: 0 0 40px 0;
-    background-color: #dff;
+    -webkit-clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+    background-color: #cff;
+    padding: 10% 0 3%;
 }
 
-.Block1 {
-    position: relative;
-    padding: 20px 0 40px 0;
-
-}
-
-.Block2 {
-    position: relative;
-    z-index: 0;
-}
-
-.Block2::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-
-    /*四角形を傾けます*/
-    transform: skewY(7deg);
-    transform-origin: top right;
-
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: #dff;
-}
 
 
 
@@ -64,18 +56,18 @@ h1 {
     letter-spacing: 10px;
 }
 
-header nav {
+nav {
     margin: 0 0 0 auto;
 }
 
-header ul {
+ul {
     list-style: none;
     margin: 0;
     display: flex;
     align-items: center;
 }
 
-header li {
+li {
     margin: 0 0 0 25px;
 }
 
@@ -85,32 +77,54 @@ a {
     text-decoration: none;
     letter-spacing: 3px;
     color: #777;
+
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
 }
 
 a:hover {
     opacity: 0.5;
-    border-bottom: 1px solid #0ff;
-    margin-bottom: -1px;
-    /*ボーダー分のずれ修正*/
+    color: #0ff;
 }
 
-a:visited {
-    color: #777;
+a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #0ff;
+    transform: translate(-100%, 0);
+    transition: transform ease-out 0.4s;
+    content: "";
 }
 
-.now {
+a:hover:after {
+    transform: translate(0, 0);
+}
+
+
+.blue a {
     color: #0cc;
 }
 
 
 /*写真*/
 .photo {
-    padding: 15% 0 10%;
+    padding: 15% 0 5%;
     text-align: center;
+}
+
+/*枠線をつける*/
+.frame {
+    padding: 10px;
+    border: 1px solid #0ff;
 }
 
 /*副題*/
 h2 {
+    padding: 5% 0 2%;
     text-align: center;
     font-weight: lighter;
     letter-spacing: 7px;
@@ -122,14 +136,14 @@ h2 {
 .item {
     line-height: 3;
     text-align: center;
-    font-family: Helvetica;
     color: #777;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
 }
 
 /*フッター*/
 footer {
-    padding: 0 10%;
+    position: relative;
+    padding: 0 8%;
     color: #777;
 }
 
@@ -142,6 +156,57 @@ h3 {
 
 small {
     position: absolute;
-    bottom: 30%;
-    right: 10%;
+    bottom: 10%;
+    right: 8%;
+}
+
+
+/*アコーディオン　目次*/
+details {
+    padding: 20% 0 5%;
+    text-align: center;
+}
+
+.tab-003 {
+    padding: 10% 0 5%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+}
+
+.tab-003 > label {
+    flex: 1 1;
+    order: -1;
+    min-width: 70px;
+    padding: .7em 1em .5em;
+    background-color: #f2f2f2;
+    color: #999;
+    font-weight: 600;
+    font-size: .9em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tab-003 > label:hover {
+    opacity: .8;
+}
+
+.tab-003 input {
+    display: none;
+}
+
+.tab-003 > div {
+    display: none;
+    width: 100%;
+    padding: 1.5em 1em;
+    background-color: #fff;
+}
+
+.tab-003 label:has(:checked) {
+    border-bottom: 4px solid #80ffff;
+    color: #80ffff;
+}
+
+.tab-003 label:has(:checked) + div {
+    display: block;
 }

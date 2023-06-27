@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TodoList</title>
+    <title>TodoListDetail</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,7 +12,7 @@
 
         <!-- Header Start -->
         <header>
-            <h1>TodoList</h1>
+            <h1>TodoListDetail</h1>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -23,17 +23,47 @@
         </header>
         <!-- Header End -->
 
-        <!-- Contents Start -->
-        <div class="photo">
-            <img src="image/Todo.png" alt="nemophila" width="700" class="frame">
+        <div class="tab-003">
+            <label>
+                <input type="radio" name="tab-003" checked>
+                タブ1
+            </label>
+            <div>
+                アクティブになると下線が付くタブです。アクティブ時の文字色と下線の色は揃えるのがおすすめです。
+            </div>
+        
+            <label>
+                <input type="radio" name="tab-003">
+                タブ2
+            </label>
+            <div>ぜひお好みの色にアレンジしてみてください。</div>
+        
+            <label>
+                <input type="radio" name="tab-003">
+                タブ3
+            </label>
+            <div>もちろんレスポンシブ対応で、タブの追加にも対応しています。</div>
         </div>
 
-        <h2>概要</h2>
+        <!-- Contents Start -->
+        <details>
+            <summary>Contents</summary>
+            <p>detailsタグの中に、summryタグで囲った常に見える要素と、折りたたむ要素を並べて記述しましょう</p>
+        </details>
+
+        <div class="photo">
+            <img src="image/Login.png" alt="Login" width="700" class="frame">
+        </div>
+
+        <h2>ログイン</h2>
         <div class="item">
             <p>
-                やるべき作業を書き出し、作業を整理・可視化することができます。<br>
-                ログイン機能を実装しており、ログインユーザーごとに表示内容や動作が変化します。<br>
-                管理権限機能により、管理者権限を持ったユーザーのみが変更可能な項目もあります。
+                「ユーザーID」とパスワードを入力し、該当するユーザーが見つかった場合はログインされます。
+            </p>
+            <p>
+                未ログイン時はこの画面に遷移<br>
+                入力がない場合や誤りがある場合にエラーが表示<br>
+                ログアウト時はログイン画面へ遷移し、ログアウトメッセージが表示
             </p>
         </div>
 
@@ -57,8 +87,9 @@
             </p>
         </div>
 
+
         <div class="blue item">
-            <a href="TodoListDetail.html">Todoリストの詳細→</a><br>
+            <a href="https://github.com/kogitma/test/tree/master">Todoリストのソースコード→</a><br>
             <a href="Product.html">←Productへ</a>
         </div>
         <!-- Contents End -->

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HitAndBlow</title>
+    <title>Product</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,23 +12,27 @@
 
         <!-- Header Start -->
         <header>
-            <h1>HitAndBlow</h1>
+            <h1>Product</h1>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="About.html">About</a></li>
-                    <li><a href="Product.html">Product</a></li>
+                    <div class="blue">
+                        <li><a href="#" class="now">Product</a></li>
+                    </div>
                 </ul>
             </nav>
         </header>
         <!-- Header End -->
 
-        <!-- Contents Start -->
         <div class="photo">
-            <img src="image/HitAndBlow.png" alt="nemophila" width="700" class="frame">
+            <img src="image/book.jpg" alt="book" width="500">
         </div>
 
-        <h2>概要</h2>
+
+        <div class="blue">
+            <h2><a href="HitAndBlow.html">ヒット＆ブロー/C++</a></h2>
+        </div>
         <div class="item">
             <p>
                 4桁の数字を予想するゲームです。<br>
@@ -36,26 +40,32 @@
                 数字の予想が全て当たった場合はクリアとなり、クリアまでにかかった回数が表示されます。
             </p>
         </div>
-        
-        <h2>開発環境</h2>
+
+
+        <div class="blue">
+            <h2><a href="Poker.html">ポーカー/Java</a></h2>
+        </div>
         <div class="item">
             <p>
-                OS : Windows 10<br>
-                開発言語 : C++<br>
-                その他 : Visual Studio
+                手札を交換してポーカーの役を作成するゲームです。<br>
+                ゲーム開始時にシャッフルされたトランプの山札から5枚手札が配られます。<br>
+                手札の交換はカードの番号を指定することで行われ、山札がなくなるまで交換することができます。<br>
+                該当する場合には役名(ONE PAIR, FLASHなど)が表示されます。
             </p>
         </div>
 
-        <h2>補足事項</h2>
+        <div class="blue">
+            <h2><a href="TodoList.html">Todoリスト/Laravel</a></h2>
+        </div>
         <div class="item">
             <p>
-                コード内の「#define」部の定数を変更することで桁数や使用する数字の範囲を変更することができます。
+                やるべき作業を書き出し、作業を整理・可視化することができます。<br>
+                ログイン機能を実装しており、ログインユーザーごとに表示内容や動作が変化します。<br>
+                管理権限機能により、管理者権限を持ったユーザーのみが変更可能な項目もあります。
             </p>
         </div>
-
-        <div class="blue item">
-            <a href="https://github.com/kogitma/HitAndBlow">ヒット＆ブローのソースコード→</a><br>
-            <a href="Product.html">←Productへ</a>
+        <div class="item blue">
+            <a href="index.html">←Home</a>
         </div>
         <!-- Contents End -->
 
@@ -76,9 +86,6 @@
             </div>
         </footer>
         <!-- Footer End -->
-
-
-
     </div>
 </body>
 
