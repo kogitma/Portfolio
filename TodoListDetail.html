@@ -8,11 +8,18 @@
 </head>
 
 <body>
+    <!--ページトップに戻るボタン-->
+    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
+    
     <div class="Block1">
 
         <!-- Header Start -->
         <header>
-            <h1>TodoListDetail</h1>
+            <h1>
+                <a href="TodoListDetail.html">
+                    TodoListDetail
+                </a>
+            </h1>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -24,13 +31,13 @@
         <!-- Header End -->
 
         <!-- Contents Start -->
-        <div class="photo">
+        <div class="topphoto">
             <img src="image/Login.jpg" alt="Login" width="700" class="frame">
         </div>
         <h2>ログイン</h2>
         <div class="item">
             <p>
-                「ユーザーID」とパスワードを入力し、該当するユーザーが見つかった場合はログインされます。<br>
+                「ユーザーID」とパスワードを入力し、該当するユーザーが見つかった場合はログインされます。(ミドルウェア)<br>
                 入力がない場合や誤りがある場合にエラーが表示されます。（バリデーション、フラッシュデータ）<br>
                 ログアウト時はログイン画面へ遷移し、ログアウトメッセージが表示されます。（フラッシュデータ）<br>
                 ログインに成功した場合、メニュー画面が表示されます。
@@ -44,8 +51,9 @@
         <div class="item">
             <p>
                 ログインユーザーの登録したリストが一覧表示されます。<br>
+                表示件数を5,10,20,30,40,50から選択することができます。(ページネーション)<br>
                 検索機能で絞り込むことも可能です。（タイトル・詳細内容は部分一致、開始日と期限日は範囲検索）<br>
-                削除ボタンを押すと確認画面が表示され（onclick属性）、承諾すると削除されます。
+                削除ボタンを押すと確認画面が表示され(onclick属性)、承諾すると削除されます。
             </p>
         </div>
 
@@ -56,16 +64,22 @@
         <div class="item">
             <p>
                 内容を入力し「確認画面へ」を押すと確認画面に遷移します。<br>
+                カテゴリは複数選択することが可能で、選択しないことも可能です。<br>
                 必須項目が入力されていなかった場合や入力方式に従っていない場合にはエラーが表示されます。（バリデーション）<br>
                 編集の場合、登録内容が初期ステータスとして入力されています。<br>
-                確認画面にて登録ボタンを押すことで登録することができます。
+                確認画面にて登録ボタンを押すことで登録が完了します。(トランザクションが設定されています。)<br>
+                また、登録の際にはログインユーザーのIDが自動で登録されます。
             </p>
         </div>
 
+        <div class="photo">
+            <img src="image/ER.jpg" alt="ER図" width="700" class="frame">
+        </div>
         <h2>Todoリスト以外のページについて</h2>
         <div class="item">
             <p>
-                基本的な機能は（概ね）TODO管理機能同様です。<br>
+                TODO管理機能の他に「アカウント管理」「カテゴリ管理」「ステータス管理」の機能があります。<br>
+                基本的な機能は(概ね)TODO管理機能同様で、各機能で登録した内容がTODO管理機能に反映されます。<br>
                 なお、相違点は以下です。<br>
                 アカウント管理 : ログインせずともアクセスが可能<br>
                 カテゴリ管理 : 管理者の場合は全ユーザーのリスト確認＆検索が可能<br>
@@ -74,8 +88,8 @@
             </p>
         </div>
 
-        <div class="blue item">
-            <a href="https://github.com/kogitma/test/tree/master">Todoリストのソースコード→</a><br>
+        <div class="guide blue">
+            <a href="https://github.com/kogitma/Todo/tree/master">Todoリストのソースコード→</a><br>
             <a href="TodoList.html">←Todoリスト</a>
         </div>
         <!-- Contents End -->
