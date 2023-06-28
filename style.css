@@ -8,19 +8,15 @@
 html {
     font-size: 100%;
     font-family: "游ゴシック", "Yu Gothic";
-    font-feature-settings: "palt";
     /* 自動カーニング */
-    text-rendering: optimizelegibility;
-    /* カーニングを行う */
+    font-feature-settings: "palt";
     letter-spacing: 0.1em;
     line-height: 2;
     color: #777;
-    -webkit-text-size-adjust: 100%;
     /* フォントサイズを自動で変更させない */
-    -webkit-font-smoothing: antialiased;
-    /* Safari等でフォント変更させない */
-    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
     /* タップ時の強調をなくす */
+    -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
 }
 
