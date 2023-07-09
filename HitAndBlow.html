@@ -3,28 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HitAndBlow</title>
+    <title>Hit&Blow</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!--ページトップに戻るボタン-->
-    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
-    
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
     <div class="Block1">
 
         <!-- Header Start -->
-        <header>
+        <header class="menu">
+
             <h1>
-                <a href="HitAndBlow.html">
-                    HitAndBlow
+                <a href="index.html">
+                    Portfolio
                 </a>
             </h1>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="About.html">About</a></li>
-                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="Product.html">Product</a>
+                        <ul>
+                            <li>
+                                <span class="blue">
+                                    <a href="HitAndBlow.html">Hit&Blow</a>
+                                </span>
+                            </li>
+                            <li><a href="Poker.html">Poker</a></li>
+                            <li><a href="TodoList.html">TodoList</a></li>
+                            <li><a href="TodoListDetails.html">TodoListDetails</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -32,9 +46,11 @@
 
         <!-- Contents Start -->
         <div class="topphoto">
-            <a href="https://github.com/kogitma/HitAndBlow">
-                <img src="image/HitAndBlow.jpg" alt="HitAndBlow" width="700" class="frame">
-            </a>
+            <div class="c-bnr">
+                <a href="https://github.com/kogitma/HitAndBlow">
+                    <img src="image/HitAndBlow.jpg" alt="HitAndBlow" width="700" class="frame">
+                </a>
+            </div>
         </div>
 
         <h2>概要</h2>
@@ -45,7 +61,7 @@
                 数字の予想が全て当たった場合はクリアとなり、クリアまでにかかった回数が表示されます。
             </p>
         </div>
-        
+
         <h2>開発環境</h2>
         <div class="item">
             <p>

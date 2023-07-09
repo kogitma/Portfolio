@@ -9,23 +9,33 @@
 
 <body>
     <!--ページトップに戻るボタン-->
-    <a class="pagetop" href="#"><div class="pagetop__arrow"></div></a>
-    
+    <a class="pagetop" href="#">
+        <div class="pagetop__arrow"></div>
+    </a>
+
     <div class="Block1">
         <!-- Header Start -->
-        <header>
+        <header class="menu">
+
             <h1>
-                <a href="About.html">
-                    About
+                <a href="index.html">
+                    Portfolio
                 </a>
             </h1>
             <nav class="nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <div class="blue">
-                        <li><a href="#">About</a></li>
-                    </div>
-                    <li><a href="Product.html">Product</a></li>
+                    <span class="blue">
+                        <li><a href="About.html">About</a></li>
+                    </span>
+                    <li><a href="Product.html">Product</a>
+                        <ul>
+                            <li><a href="HitAndBlow.html">Hit&Blow</a></li>
+                            <li><a href="Poker.html">Poker</a></li>
+                            <li><a href="TodoList.html">TodoList</a></li>
+                            <li><a href="TodoListDetails.html">TodoListDetails</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
