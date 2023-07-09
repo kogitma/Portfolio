@@ -20,6 +20,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 /*ページトップ移動*/
 .pagetop {
     height: 50px;
@@ -50,6 +52,8 @@ html {
         border-color: #0ff;
     }
 }
+
+
 
 /* bodyの諸設定 */
 body {
@@ -82,11 +86,9 @@ body {
 
 
 
-
-
 /*ヘッダー部分*/
 header {
-    padding: 3% 8%;
+    padding: 2em 8em;
     position: fixed;
     top: 0;
     width: 100%;
@@ -146,12 +148,6 @@ ul li ul li a:hover {
 
 
 
-
-
-
-
-
-
 /*リンク全般*/
 a {
     text-decoration: none;
@@ -197,9 +193,10 @@ a:hover:after {
 }
 
 
+
 /*写真*/
 .topphoto {
-    padding: 20% 0 5%;
+    padding: 10em 0 5%;
     text-align: center;
 }
 
@@ -218,6 +215,8 @@ a:hover:after {
     border: 1px solid #0ff;
 }
 
+
+
 /*副題*/
 h2 {
     margin: 0;
@@ -226,6 +225,7 @@ h2 {
     letter-spacing: 0.2em;
     color: #0cc;
 }
+
 
 
 /*各文章*/
@@ -238,6 +238,8 @@ h2 {
     text-align: center;
     padding: 5%;
 }
+
+
 
 /*フッター*/
 footer {
